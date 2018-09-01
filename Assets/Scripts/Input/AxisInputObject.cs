@@ -12,11 +12,15 @@ public class AxisInputObject : ScriptableObject {
     public Vector2 Axes => _axes;
     public Vector2 Offset => _axes * _axes;
 
+    // NOTE: Put rigidbodies in the bones and skin weights. 
+
     // float traumaDrainRate;
 
     // Use this for initialization
     // void OnEnable () => traumaDrainRate = 1f / timeFromMaxToMin;
     public void RemoveAllDelta() => _axes = Vector2.zero;
+    public void RemoveOneTenthX() => _axes.x = 0.9f * _axes.x;
+    public void RemoveOneTenthY() => _axes.y = 0.9f * _axes.y;
     
     public void AddDelta(Vector2 inputDelta) 
     {

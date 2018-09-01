@@ -16,6 +16,7 @@ public class PersistentCameraShake3D : ScriptableObject {
     public float MaxAngle => maxAngle;
     public float XTimeScale => xTimeScale;
     public float YTimeScale => yTimeScale;
+    public float MinimumTrauma {get; set;} = 0f;
 
     public float Trauma {get; private set;}
     public float Shake => Trauma * Trauma;
@@ -24,11 +25,11 @@ public class PersistentCameraShake3D : ScriptableObject {
     // Use this for initialization
     void OnEnable () => traumaDrainRate = 1f / timeFromMaxToMin;
     public float GetShakeAmnt() => Trauma * Trauma;
-    public void RemoveAllTrauma() => Trauma = 0.0f;
+    public void RemoveAllTrauma() => Trauma = MinimumTrauma;
 
     public void UpdateTrauma(float deltaTime) {
         Trauma -= traumaDrainRate * deltaTime;
-        Trauma = Mathf.Max(Trauma, 0.0f);
+        Trauma = Mathf.Max(Trauma, MinimumTrauma);
     }
 
     public void AddTrauma(float amnt) {

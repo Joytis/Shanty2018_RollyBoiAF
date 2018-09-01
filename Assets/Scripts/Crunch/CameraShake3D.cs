@@ -33,5 +33,5 @@ public class CameraShake3D : MonoBehaviour {
             // Add it to camera for that frame. 
             transform.rotation = Quaternion.Euler(offset) * baseRotation;
         }
-    }       
+    }
 }
