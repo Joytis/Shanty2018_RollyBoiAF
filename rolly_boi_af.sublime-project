@@ -3,7 +3,7 @@
 	[
         {
             "path": ".",
-            "folder_exclude_patterns": ["Assets", "FMOD", "Library", "Temp"],
+            "folder_exclude_patterns": ["FMOD", "Library", "Temp"],
         },
 	],
 	"settings": 
