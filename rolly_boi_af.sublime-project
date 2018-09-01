@@ -3,6 +3,7 @@
 	[
         {
             "path": ".",
+            "file_exclude_patterns": ["*.meta", "*.asset", "*.mat", "*.userprefs", "*.anim", "*.prefab", "*.unity", "*.controller", "*.log", "*.fbx", "*.unitypackage", "*.wav", "*.mdb", "*.ttf"], 
             "folder_exclude_patterns": ["FMOD", "Library", "Temp"],
         },
 	],

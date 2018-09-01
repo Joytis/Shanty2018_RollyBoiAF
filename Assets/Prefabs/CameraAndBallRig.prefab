@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 4573701283709778}
   - component: {fileID: 135179077642613694}
   - component: {fileID: 54033815676758946}
+  - component: {fileID: 114403914649853874}
   m_Layer: 0
   m_Name: FlippyWhale
   m_TagString: Untagged
@@ -561,6 +562,24 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
+--- !u!114 &114403914649853874
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1696260547723112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403593980066c504192c0beeb6c97a74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MeshRenderer: {fileID: 23322470291496902}
+  CollisionRadius: 0.5
+  Strength: 15
+  Dampening: 0.3
+  VelocityStretch: 0
+  Test: 0
+  Squash: 0
 --- !u!135 &135179077642613694
 SphereCollider:
   m_ObjectHideFlags: 1
