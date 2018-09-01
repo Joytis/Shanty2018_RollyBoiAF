@@ -8,8 +8,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73557041955c7da4384c57fb9c2ef472, type: 3}
-  m_Name: aio_AxisInputObject
+  m_Script: {fileID: 11500000, guid: b47cf857e51a5c348ae433b718a8786a, type: 3}
+  m_Name: so_PersistentCameraShake3D
   m_EditorClassIdentifier: 
-  horizontalAxisDelta: 0
-  verticalHorizontalAxisDelta: 0
+  timeFromMaxToMin: 1
+  maxAngle: 20
+  xTimeScale: 20
+  yTimeScale: 20

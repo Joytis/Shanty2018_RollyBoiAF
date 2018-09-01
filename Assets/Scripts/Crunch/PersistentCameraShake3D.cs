@@ -1,24 +1,21 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(
-    fileName = "PersistentCameraShake", 
-    menuName = "LWG/PersistentGameData/PersistentCameraShake"
+    fileName = "PersistentCameraShake3D", 
+    menuName = "Game/PersistentCameraShake3D"
 )]
 public class PersistentCameraShake3D : ScriptableObject {
 
     [SerializeField] float timeFromMaxToMin = 1.0f;
-    [SerializeField] float maxOffset = 1.0f;
     [SerializeField] float maxAngle = 20.0f;
     // Rate at which trauma decreases per second. 
     [SerializeField] float xTimeScale = 1.0f;
     [SerializeField] float yTimeScale = 1.0f;
 
     public float TimeFromMaxToMin => timeFromMaxToMin;
-    public float MaxOffset => maxOffset;
     public float MaxAngle => maxAngle;
     public float XTimeScale => xTimeScale;
     public float YTimeScale => yTimeScale;
-
 
     public float Trauma {get; private set;}
     public float Shake => Trauma * Trauma;
