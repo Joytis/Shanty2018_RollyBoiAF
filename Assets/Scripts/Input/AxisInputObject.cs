@@ -13,6 +13,7 @@ public class AxisInputObject : ScriptableObject {
     public Vector2 Offset => _axes * _axes;
 
     // NOTE: Put rigidbodies in the bones and skin weights. 
+    // TODO: Make option to swapp controlls
 
     // float traumaDrainRate;
 
