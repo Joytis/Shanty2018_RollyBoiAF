@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(MeshCollider))]
+[RequireComponent(typeof(Collider))]
 public class NonsensePlatformController : MonoBehaviour {
 
     public enum AxisOfRotation : byte { 
@@ -22,12 +22,26 @@ public class NonsensePlatformController : MonoBehaviour {
     // Actual input for the platform. 
     public AxisInputObject _aio;
     public Transform _whaleOrb;
+    Collider _whaleCollider;
+    Collider _meshCollider;
 
     public float maxAbsAngVelocity = 5f;
-    public AxisOfRotation axis = AxisOfRotation.Z;
-    public MeshBounds meshBoundsOffset = MeshBounds.Height;
-
     public float maxAbsVertVelocity = 1f;
+    public AxisOfRotation axis = AxisOfRotation.Z;
+
+    public MeshBounds meshBoundsOffsetPlatform = MeshBounds.Height;
+    public MeshBounds meshBoundsOffsetWhale = MeshBounds.Height;
+
+    float currentAngVelocity = 0f;
+    float currentVelocity = 0f;
+
+
+    void Awake() 
+    {
+        _meshCollider = GetComponent<Collider>();
+        _whaleCollider = _whaleOrb.gameObject.GetComponent<Collider>();
+    }
+
 
     Vector3 GetAngularVelocity(float angle)
     {
@@ -43,29 +57,53 @@ public class NonsensePlatformController : MonoBehaviour {
         return Vector3.zero;
     }
 
+    Vector3 GetBoundsOffset(MeshBounds bounds, Collider coll)
+    {
+        var extents = coll.bounds.extents;
+        switch(bounds)
+        {
+            case MeshBounds.Width:
+                return (extents.x * coll.transform.right);
+            case MeshBounds.Height:
+                return (extents.y * coll.transform.up);
+            case MeshBounds.Depth:
+                return (extents.z * coll.transform.forward);
+        }
+        return Vector3.zero;
+    }
+
 	// Update is called once per frame
 	void Update () 
     {
-        // Bounds checking
-        var currentAngVelocity = _aio.Axes.x * maxAbsAngVelocity;
-
-        // Get Angular momentum. 
-        Vector3 angularVelocity = GetAngularVelocity(currentAngVelocity);
-        transform.rotation = Quaternion.Euler(angularVelocity) * transform.rotation;
-
-        // Move the whale slightly based off angle rotated. 
-        var offsetPosition = 
-        _whaleOrb.RotateAround(transform.position, Vector3.forward, currentAngVelocity);
-
-        var currentVelocity = _aio.Axes.y * maxAbsVertVelocity;
-        // var posToAdd = 
-        var addedVelocity = new Vector3(0, currentVelocity, 0); 
-        transform.position += addedVelocity;
-
         // Update the axes manually. 
         _aio.UpdateAxes(Time.deltaTime);
 
-        // Add to whale for smooth transition. 
-        _whaleOrb.position += addedVelocity;
-	}
+        // Get Angular momentum. 
+        // Bounds checking
+        var currentAngVelocity = _aio.Axes.x * maxAbsAngVelocity;
+        Vector3 angularVelocity = GetAngularVelocity(currentAngVelocity);
+        transform.rotation = Quaternion.Euler(angularVelocity) * transform.rotation;
+        
+        currentVelocity = _aio.Axes.y * maxAbsVertVelocity;
+        var addedPosition = new Vector3(0, currentVelocity, 0); 
+        transform.position += addedPosition;
+    }
+
+    void OnCollisionStay()
+    {
+
+
+        // Move the whale slightly based off angle rotated. 
+        var meshColliderBoudns = _meshCollider.bounds;
+
+        // Offset pivot by meshes.
+        var offset = GetBoundsOffset(meshBoundsOffsetPlatform, _meshCollider);
+        var whaleOffset = GetBoundsOffset(meshBoundsOffsetWhale, _whaleCollider);
+        var totalOffset = transform.position + offset + whaleOffset;
+        _whaleOrb.RotateAround(totalOffset, Vector3.forward, currentAngVelocity);
+
+        // var posToAdd = 
+        var addedPosition = new Vector3(0, currentVelocity, 0); 
+        _whaleOrb.position += addedPosition;
+    }
 }

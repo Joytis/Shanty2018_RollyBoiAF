@@ -32,18 +32,6 @@ public class AxisInputObject : ScriptableObject {
             _axes.y = 0;
     }
 
-    // public float ApproachZero(float val, float deltaTime)
-    // {
-    //     if(val < 0) {
-    //         val += traumaDrainRate * deltaTime;
-    //         val = Mathf.Max(val, 0.0f);   
-    //     }
-    //     else {
-    //         val -= traumaDrainRate * deltaTime;
-    //         val = Mathf.Min(val, 0.0f);   
-    //     }
-    //     return val;
-    // }
 
     public void UpdateAxes(float deltaTime) {
         // _axes.x = ApproachZero(_axes.x, deltaTime);
