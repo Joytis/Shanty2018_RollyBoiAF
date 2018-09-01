@@ -3,16 +3,11 @@ using UnityEngine;
 public class DoShakeOnImpact : MonoBehaviour {
 
     [SerializeField] PersistentCameraShake3D _shakeData;
+    public float shakePerForce = 0.1f; // Lol what is that unit.
 
-    // Range from 0-1
-    Vector3 offset = Vector3.zero;
-    Quaternion baseRotation;
-    Quaternion rotation;
-
-    public float shakePerForce = 1f; // Lol what is that unit.
-
-    void OnCollisionEnter(Collision coll) {
-
+    void OnCollisionEnter(Collision coll) 
+    {
+        _shakeData.AddTrauma(coll.impulse.magnitude * shakePerForce);
     }
 
 }
