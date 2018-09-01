@@ -14,6 +14,7 @@ public class SpawnManager : MonoBehaviour {
     public List<ObjectItem> objectList; //Our spawnable stuff we're going to have
     public List<Transform> spawnLocations; //Our spawn locations we can have
     public float spawnRate; //Our spawning rate of our game objects
+    public Transform spawnLocationParentTrans; //Where are our spawn points in the world?
 
     //Private variables
     private float timer = 0.0f;
@@ -21,6 +22,12 @@ public class SpawnManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
+        //Lets populate our list
+        for(int i = 0; i < spawnLocationParentTrans.childCount; i++)
+        {
+            //Add to our list of spawn locations
+            spawnLocations.Add(spawnLocationParentTrans.GetChild(i));
+        }
 	}
 	
 	// Update is called once per frame
@@ -40,8 +47,8 @@ public class SpawnManager : MonoBehaviour {
     void SpawnObject()
     {
         //Now we spawn a random object in a random spawn location
-        int rand = Random.Range(0, objectList.Count - 1);
-        int rand2 = Random.Range(0, spawnLocations.Count - 1);
+        int rand = Random.Range(0, objectList.Count);
+        int rand2 = Random.Range(0, spawnLocations.Count);
         
         //Our object item class will handle how fast they move etc so we'll spawn our object
         //then apply the values we need
