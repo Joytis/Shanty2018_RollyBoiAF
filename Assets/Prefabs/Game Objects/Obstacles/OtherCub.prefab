@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 136136627991051242}
   - component: {fileID: 114713750324467326}
   m_Layer: 0
-  m_Name: Cube 1
+  m_Name: OtherCub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cf0f611f9ba3e424b9d3ea4fdbfe1d02, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPowerLevel: 300
-  deathType: 1
+  deathType: 0
 --- !u!136 &136136627991051242
 CapsuleCollider:
   m_ObjectHideFlags: 1
