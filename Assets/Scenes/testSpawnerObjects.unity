@@ -118,24 +118,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4751091605726228, guid: 3f1fb038f411bd54d8d43619e48dad0d,
     type: 2}
   m_PrefabInternal: {fileID: 901671314}
---- !u!1 &22811363 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1696260547723112, guid: 974c7e6824f4e114abb3c9013fb1bc75,
-    type: 2}
-  m_PrefabInternal: {fileID: 230729485}
---- !u!114 &22811368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 22811363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8552c00f7bf1174d8768dea233ad683, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathType: 2
-  force: 750
 --- !u!1 &49090456
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,70 +404,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 64880036552894908, guid: 974c7e6824f4e114abb3c9013fb1bc75,
-        type: 2}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 462031674}
     - target: {fileID: 33218015834945072, guid: 974c7e6824f4e114abb3c9013fb1bc75,
         type: 2}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 462031674}
-    - target: {fileID: 23652175244664398, guid: 974c7e6824f4e114abb3c9013fb1bc75,
-        type: 2}
-      propertyPath: m_SelectedEditorRenderState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1485688529059374, guid: 974c7e6824f4e114abb3c9013fb1bc75, type: 2}
-      propertyPath: m_Name
-      value: Paddle
-      objectReference: {fileID: 0}
-    - target: {fileID: 1485688529059374, guid: 974c7e6824f4e114abb3c9013fb1bc75, type: 2}
-      propertyPath: m_TagString
-      value: Paddle
-      objectReference: {fileID: 0}
-    - target: {fileID: 64880036552894908, guid: 974c7e6824f4e114abb3c9013fb1bc75,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1696260547723112, guid: 974c7e6824f4e114abb3c9013fb1bc75, type: 2}
-      propertyPath: m_TagString
-      value: Whale
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 64880036552894908, guid: 974c7e6824f4e114abb3c9013fb1bc75, type: 2}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 974c7e6824f4e114abb3c9013fb1bc75, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &333326383 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1485688529059374, guid: 974c7e6824f4e114abb3c9013fb1bc75,
-    type: 2}
-  m_PrefabInternal: {fileID: 230729485}
 --- !u!4 &333326384 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4642680300710600, guid: 974c7e6824f4e114abb3c9013fb1bc75,
     type: 2}
   m_PrefabInternal: {fileID: 230729485}
---- !u!65 &333326386
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 333326383}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 15.002728, y: 1.0554359, z: 1.0038335}
-  m_Center: {x: 0, y: 0.000000029802322, z: -0.00000008940697}
 --- !u!43 &462031674
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh23964
+  m_Name: pb_Mesh29008
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
