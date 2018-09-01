@@ -22,6 +22,12 @@ public class WhaleHealthManager : MonoBehaviour {
 		
 	}
 
+    public void ApplyScore(int score)
+    {
+        Debug.Log("Adding score ");
+        GameObject.FindGameObjectWithTag("ScoreManager").SendMessage("EarnScore", score,SendMessageOptions.DontRequireReceiver);
+    }
+
     void ApplyPowerLevel(float powerLevel)
     {
         force = powerLevel;

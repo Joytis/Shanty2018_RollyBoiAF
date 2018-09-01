@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa69d4ed6490b342a13e35ff89b6973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPowerLevel: 300
+  hitPowerLevel: 1500
   deathType: 0
 --- !u!136 &136136627991051242
 CapsuleCollider:

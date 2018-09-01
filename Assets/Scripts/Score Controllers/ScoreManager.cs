@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour {
 
     //Public Variables
-    public Text HighscoreText;
+    public Text highscoreText;
     public Text scoreText;
     public float earnRate; //How fast we earn just by moving through space and time
     public int score; //our current score duhhh
@@ -18,8 +18,9 @@ public class ScoreManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        highScore = PlayerPrefs.GetInt("HighScore",highScore);
+        highscoreText.text = "Highscore : " + highScore.ToString();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -27,6 +28,13 @@ public class ScoreManager : MonoBehaviour {
         if(!gameOver)
         {
             scoreText.text = "Score : " + score.ToString();
+            highscoreText.text = "Highscore : " + highScore.ToString();
+
+            if(score > highScore)
+            {
+                highScore = score;
+                PlayerPrefs.SetInt("HighScore", score);
+            }
 
             //Increment our timer then add to our score 1 point based on earn rate
             timer += Time.deltaTime;
