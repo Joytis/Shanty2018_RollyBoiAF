@@ -8,6 +8,7 @@ public class ShowPanels : MonoBehaviour {
 	public GameObject optionsTint;							//Store a reference to the Game Object OptionsTint 
 	public GameObject menuPanel;							//Store a reference to the Game Object MenuPanel 
 	public GameObject pausePanel;                           //Store a reference to the Game Object PausePanel 
+    public GameObject creditsPanel;
 
     private GameObject activePanel;                         
     private MenuObject activePanelMenuObject;
@@ -52,6 +53,8 @@ public class ShowPanels : MonoBehaviour {
 	//Call this function to activate and display the main menu panel during the main menu
 	public void ShowMenu()
 	{
+        Debug.Log("Show menu");
+        creditsPanel.SetActive(false);
 		menuPanel.SetActive (true);
         SetSelection(menuPanel);
     }
@@ -78,4 +81,12 @@ public class ShowPanels : MonoBehaviour {
 		optionsTint.SetActive(false);
 
 	}
+
+    public void ShowCreditsPanel()
+    {
+        Debug.Log("Showing Credits");
+        menuPanel.SetActive(false);
+        creditsPanel.SetActive(true);
+        creditsPanel.GetComponent<GoBackToMenuSoon>().StartGoback(gameObject);
+    }
 }
