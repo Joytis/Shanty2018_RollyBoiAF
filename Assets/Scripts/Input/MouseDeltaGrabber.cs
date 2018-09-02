@@ -19,6 +19,8 @@ public class MouseDeltaGrabber : MonoBehaviour {
     }
 
 
+    // GOOD VALUE FOR BALL: 0.01
+    // GOOD VALUE FOR MY MOUSE: 0.3;
     // every 2 seconds perform the print()
     IEnumerator DeadenInputForTime(float waitTime)
     {

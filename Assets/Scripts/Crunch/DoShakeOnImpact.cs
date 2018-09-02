@@ -10,4 +10,4 @@ public class DoShakeOnImpact : MonoBehaviour {
         _shakeData.AddTrauma(coll.impulse.magnitude * shakePerForce);
     }
 
-}
+}   
