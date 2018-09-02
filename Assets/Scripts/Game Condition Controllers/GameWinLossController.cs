@@ -52,5 +52,7 @@ public class GameWinLossController : MonoBehaviour {
         lossScreen.SetActive(true);
         // Debug.LogWarning("YOU LOSE");
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
     }
 }
