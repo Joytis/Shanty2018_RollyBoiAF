@@ -220,6 +220,25 @@ Prefab:
       propertyPath: _disabledOnStart.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4766738245773468, guid: b8e563d8aec8422498d293c66be994af, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 114205081079929256, guid: b8e563d8aec8422498d293c66be994af,
+        type: 2}
+      propertyPath: objectList.Array.data[0].weight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114205081079929256, guid: b8e563d8aec8422498d293c66be994af,
+        type: 2}
+      propertyPath: objectList.Array.data[1].weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114205081079929256, guid: b8e563d8aec8422498d293c66be994af,
+        type: 2}
+      propertyPath: objectList.Array.data[2].weight
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8e563d8aec8422498d293c66be994af, type: 2}
   m_IsPrefabAsset: 0

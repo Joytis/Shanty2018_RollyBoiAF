@@ -15,5 +15,7 @@ public class ObjectItem  {
     public GameObject gamePrefab;
 
     public float speed;
+
+    public int weight = 1;
     
 }

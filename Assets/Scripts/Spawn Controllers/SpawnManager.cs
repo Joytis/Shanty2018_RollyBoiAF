@@ -54,16 +54,30 @@ public class SpawnManager : MonoBehaviour {
 
     void SpawnObject()
     {
+        int totalWeight = 0;
+        foreach(var obj in objectList)
+            totalWeight += obj.weight;
+
+        // Choose object based on weight. 
+        int rand = Random.Range(0, totalWeight);
+        ObjectItem item = objectList[0];
+        foreach(var obj in objectList) {
+            item = obj;
+            rand -= obj.weight;
+            if(rand < 0 )
+                break;
+        }
+
+
         //Now we spawn a random object in a random spawn location
-        int rand = Random.Range(0, objectList.Count);
         int rand2 = Random.Range(0, spawnLocations.Count);
         
         //Our object item class will handle how fast they move etc so we'll spawn our object
         //then apply the values we need
-        GameObject go = (GameObject)Instantiate(objectList[rand].gamePrefab, spawnLocations[rand2].position, Quaternion.identity, null);
+        GameObject go = (GameObject)Instantiate(item.gamePrefab, spawnLocations[rand2].position, Quaternion.identity, null);
 
         //Now apply stuff
-        go.GetComponent<Rigidbody>().velocity = Vector3.forward * objectList[rand].speed;
+        go.GetComponent<Rigidbody>().velocity = Vector3.forward * item.speed;
         var coll = go.GetComponent<Collider>();
         var paddle = GameObject.FindGameObjectWithTag("Paddle");
         var paddleColl = paddle.GetComponent<Collider>();
