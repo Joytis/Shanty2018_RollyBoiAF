@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4879640035591800}
   - component: {fileID: 33375048009821326}
   - component: {fileID: 23733530488883962}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: poleRing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4635573440549996}
   - component: {fileID: 33637897647090140}
   - component: {fileID: 23961898419438032}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: poleRing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4472840206417820}
   - component: {fileID: 33128245299764698}
   - component: {fileID: 23982460860915338}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: poleRing3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 4822392545107450}
   - component: {fileID: 33847708192111148}
   - component: {fileID: 23803092714512238}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: poleRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 4211546252005244}
   - component: {fileID: 33689426071977038}
   - component: {fileID: 23433445780567566}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: reel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 4073040128622970}
   - component: {fileID: 33184110607091652}
   - component: {fileID: 23789122123252378}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4553822846874162}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: fishingPole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 4520082686366054}
   - component: {fileID: 54648548169789098}
   - component: {fileID: 65442382891815376}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: pole_wrapper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,7 +155,7 @@ GameObject:
   - component: {fileID: 4705595857686918}
   - component: {fileID: 33116719275692964}
   - component: {fileID: 23437547736579576}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: cable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 4002930150413542}
   - component: {fileID: 33959266929916796}
   - component: {fileID: 23273817042855252}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: crank
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -13,7 +14,7 @@ public class StartOptions : MonoBehaviour {
 	public bool changeScenes;											//If true, load a new scene when Start is pressed, if false, fade out UI and continue in single scene
 	public bool changeMusicOnStart;										//Choose whether to continue playing menu music or start a new music clip
     public CanvasGroup fadeOutImageCanvasGroup;                         //Canvas group used to fade alpha of image which fades in before changing scenes
-    public Image fadeImage;                                             //Reference to image used to fade out before changing scenes
+    // public Image fadeImage;                                             //Reference to image used to fade out before changing scenes
 
 	[HideInInspector] public bool inMainMenu = true;					//If true, pause button disabled in main menu (Cancel in input manager, default escape key)
 	[HideInInspector] public AnimationClip fadeAlphaAnimationClip;		//Animation clip fading out UI elements alpha
@@ -24,6 +25,8 @@ public class StartOptions : MonoBehaviour {
 	private ShowPanels showPanels;										//Reference to ShowPanels script on UI GameObject, to show and hide panels
     private CanvasGroup menuCanvasGroup;
 
+    [SerializeField] List<MonoBehaviour> disabledOnAwakeStart; 
+    [SerializeField] InitialStateMachine initialStateThing;
 
     void Awake()
 	{
@@ -36,7 +39,9 @@ public class StartOptions : MonoBehaviour {
         //Get a reference to the CanvasGroup attached to the main menu so that we can fade it's alpha
         menuCanvasGroup = GetComponent<CanvasGroup>();
 
-        fadeImage.color = menuSettingsData.sceneChangeFadeColor;
+        // fadeImage.color = menuSettingsData.sceneChangeFadeColor;
+        foreach(var component in disabledOnAwakeStart)
+            component.enabled = false;
 	}
 
 
@@ -49,7 +54,7 @@ public class StartOptions : MonoBehaviour {
 			playMusic.FadeDown(menuSettingsData.menuFadeTime);
 		}
 
-		//If changeScenes is true, start fading and change scenes halfway through animation when screen is blocked by FadeImage
+		// If changeScenes is true, start fading and change scenes halfway through animation when screen is blocked by FadeImage
 		if (menuSettingsData.nextSceneIndex != 0) 
 		{
 			//Use invoke to delay calling of LoadDelayed by half the length of fadeColorAnimationClip
@@ -125,19 +130,25 @@ public class StartOptions : MonoBehaviour {
     public IEnumerator FadeCanvasGroupAlpha(float startAlpha, float endAlpha, CanvasGroup canvasGroupToFadeAlpha)
     {
 
-        float elapsedTime = 0f;
-        float totalDuration = menuSettingsData.menuFadeTime;
+        // float elapsedTime = 0f;
+        // float totalDuration = menuSettingsData.menuFadeTime;
 
-        while (elapsedTime < totalDuration)
-        {
-            elapsedTime += Time.deltaTime;
-            float currentAlpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / totalDuration);
-            canvasGroupToFadeAlpha.alpha = currentAlpha;
-            yield return null;
-        }
+        // while (elapsedTime < totalDuration)
+        // {
+        //     elapsedTime += Time.deltaTime;
+        //     float currentAlpha = Mathf.Lerp(startAlpha, endAlpha, elapsedTime / totalDuration);
+        //     canvasGroupToFadeAlpha.alpha = currentAlpha;
+        // }
+        yield return null;
 
         HideDelayed();
         Debug.Log("Coroutine done. Game started in same scene! Put your game starting stuff here.");
+        foreach(var component in disabledOnAwakeStart)
+            component.enabled = true;
+        playMusic.PlaySelectedMusic(playMusic.mainMusic);    
+        StartCoroutine(initialStateThing.StartTheThing());
+
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 

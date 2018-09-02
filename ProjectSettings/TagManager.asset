@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Paddle
   - Whale
+  - Shark
+  - ScoreManager
+  - Jellyfish
+  - Krill
   layers:
   - Default
   - TransparentFX
@@ -16,12 +20,12 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Jellyfish
+  - Shark
+  - Krill
+  - Whale
+  - Paddle
+  - GroundStuff
   - 
   - 
   - 

@@ -1,0 +1,348 @@
+fileFormatVersion: 2
+guid: ffca6057154614e46b5f76b00d41f990
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: arch
+    100002: archBrick
+    100004: archBrick1
+    100006: archBrick10
+    100008: archBrick11
+    100010: archBrick12
+    100012: archBrick13
+    100014: archBrick14
+    100016: archBrick15
+    100018: archBrick16
+    100020: archBrick17
+    100022: archBrick18
+    100024: archBrick19
+    100026: archBrick2
+    100028: archBrick20
+    100030: archBrick21
+    100032: archBrick22
+    100034: archBrick23
+    100036: archBrick24
+    100038: archBrick25
+    100040: archBrick26
+    100042: archBrick27
+    100044: archBrick28
+    100046: archBrick29
+    100048: archBrick3
+    100050: archBrick30
+    100052: archBrick31
+    100054: archBrick4
+    100056: archBrick5
+    100058: archBrick6
+    100060: archBrick7
+    100062: archBrick8
+    100064: archBrick9
+    100066: //RootNode
+    100068: door
+    100070: towerTop
+    100072: towerTop 1
+    100074: towerTop 2
+    100076: towerTop 3
+    100078: towerTop 4
+    100080: towerTop 5
+    100082: turrets
+    100084: turrets1
+    100086: turrets2
+    100088: turrets3
+    100090: turrets4
+    100092: turrets5
+    100094: wallMain
+    100096: wallMain1
+    100098: wallMain2
+    100100: wallMain3
+    100102: wallMain4
+    100104: wallMain5
+    400000: arch
+    400002: archBrick
+    400004: archBrick1
+    400006: archBrick10
+    400008: archBrick11
+    400010: archBrick12
+    400012: archBrick13
+    400014: archBrick14
+    400016: archBrick15
+    400018: archBrick16
+    400020: archBrick17
+    400022: archBrick18
+    400024: archBrick19
+    400026: archBrick2
+    400028: archBrick20
+    400030: archBrick21
+    400032: archBrick22
+    400034: archBrick23
+    400036: archBrick24
+    400038: archBrick25
+    400040: archBrick26
+    400042: archBrick27
+    400044: archBrick28
+    400046: archBrick29
+    400048: archBrick3
+    400050: archBrick30
+    400052: archBrick31
+    400054: archBrick4
+    400056: archBrick5
+    400058: archBrick6
+    400060: archBrick7
+    400062: archBrick8
+    400064: archBrick9
+    400066: //RootNode
+    400068: door
+    400070: towerTop
+    400072: towerTop 1
+    400074: towerTop 2
+    400076: towerTop 3
+    400078: towerTop 4
+    400080: towerTop 5
+    400082: turrets
+    400084: turrets1
+    400086: turrets2
+    400088: turrets3
+    400090: turrets4
+    400092: turrets5
+    400094: wallMain
+    400096: wallMain1
+    400098: wallMain2
+    400100: wallMain3
+    400102: wallMain4
+    400104: wallMain5
+    2100000: lambert1
+    2300000: archBrick
+    2300002: archBrick1
+    2300004: archBrick10
+    2300006: archBrick11
+    2300008: archBrick12
+    2300010: archBrick13
+    2300012: archBrick14
+    2300014: archBrick15
+    2300016: archBrick16
+    2300018: archBrick17
+    2300020: archBrick18
+    2300022: archBrick19
+    2300024: archBrick2
+    2300026: archBrick20
+    2300028: archBrick21
+    2300030: archBrick22
+    2300032: archBrick23
+    2300034: archBrick24
+    2300036: archBrick25
+    2300038: archBrick26
+    2300040: archBrick27
+    2300042: archBrick28
+    2300044: archBrick29
+    2300046: archBrick3
+    2300048: archBrick30
+    2300050: archBrick31
+    2300052: archBrick4
+    2300054: archBrick5
+    2300056: archBrick6
+    2300058: archBrick7
+    2300060: archBrick8
+    2300062: archBrick9
+    2300064: door
+    2300066: towerTop
+    2300068: towerTop 1
+    2300070: towerTop 2
+    2300072: towerTop 3
+    2300074: towerTop 4
+    2300076: towerTop 5
+    2300078: turrets
+    2300080: turrets1
+    2300082: turrets2
+    2300084: turrets3
+    2300086: turrets4
+    2300088: turrets5
+    2300090: wallMain
+    2300092: wallMain1
+    2300094: wallMain2
+    2300096: wallMain3
+    2300098: wallMain4
+    2300100: wallMain5
+    3300000: archBrick
+    3300002: archBrick1
+    3300004: archBrick10
+    3300006: archBrick11
+    3300008: archBrick12
+    3300010: archBrick13
+    3300012: archBrick14
+    3300014: archBrick15
+    3300016: archBrick16
+    3300018: archBrick17
+    3300020: archBrick18
+    3300022: archBrick19
+    3300024: archBrick2
+    3300026: archBrick20
+    3300028: archBrick21
+    3300030: archBrick22
+    3300032: archBrick23
+    3300034: archBrick24
+    3300036: archBrick25
+    3300038: archBrick26
+    3300040: archBrick27
+    3300042: archBrick28
+    3300044: archBrick29
+    3300046: archBrick3
+    3300048: archBrick30
+    3300050: archBrick31
+    3300052: archBrick4
+    3300054: archBrick5
+    3300056: archBrick6
+    3300058: archBrick7
+    3300060: archBrick8
+    3300062: archBrick9
+    3300064: door
+    3300066: towerTop
+    3300068: towerTop 1
+    3300070: towerTop 2
+    3300072: towerTop 3
+    3300074: towerTop 4
+    3300076: towerTop 5
+    3300078: turrets
+    3300080: turrets1
+    3300082: turrets2
+    3300084: turrets3
+    3300086: turrets4
+    3300088: turrets5
+    3300090: wallMain
+    3300092: wallMain1
+    3300094: wallMain2
+    3300096: wallMain3
+    3300098: wallMain4
+    3300100: wallMain5
+    4300000: wallMain
+    4300002: archBrick31
+    4300004: archBrick12
+    4300006: archBrick11
+    4300008: archBrick10
+    4300010: archBrick9
+    4300012: archBrick8
+    4300014: archBrick28
+    4300016: archBrick29
+    4300018: archBrick26
+    4300020: archBrick25
+    4300022: archBrick27
+    4300024: archBrick30
+    4300026: archBrick24
+    4300028: archBrick23
+    4300030: archBrick22
+    4300032: archBrick21
+    4300034: archBrick20
+    4300036: archBrick19
+    4300038: archBrick18
+    4300040: archBrick17
+    4300042: archBrick16
+    4300044: archBrick1
+    4300046: archBrick
+    4300048: archBrick7
+    4300050: archBrick6
+    4300052: archBrick5
+    4300054: archBrick4
+    4300056: archBrick14
+    4300058: archBrick13
+    4300060: archBrick15
+    4300062: archBrick2
+    4300064: archBrick3
+    4300066: turrets
+    4300068: towerTop
+    4300070: turrets1
+    4300072: towerTop
+    4300074: door
+    4300076: turrets2
+    4300078: towerTop
+    4300080: turrets3
+    4300082: towerTop
+    4300084: turrets4
+    4300086: towerTop
+    4300088: turrets5
+    4300090: towerTop
+    4300092: wallMain1
+    4300094: wallMain2
+    4300096: wallMain3
+    4300098: wallMain4
+    4300100: wallMain5
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
