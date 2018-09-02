@@ -56,8 +56,11 @@ public class SpawnManager : MonoBehaviour {
 
         //Now apply stuff
         go.GetComponent<Rigidbody>().velocity = Vector3.forward * objectList[rand].speed;
-        Physics.IgnoreCollision(go.GetComponent<CapsuleCollider>(), GameObject.FindGameObjectWithTag("Paddle").GetComponent<BoxCollider>());
-     timer = 0.0f;
+        var coll = go.GetComponent<Collider>();
+        var paddle = GameObject.FindGameObjectWithTag("Paddle");
+        var paddleColl = paddle.GetComponent<Collider>();
+        Physics.IgnoreCollision(coll, paddleColl);
+         timer = 0.0f;
     }
 }
 

@@ -323,8 +323,8 @@ GameObject:
   - component: {fileID: 65366503644817430}
   - component: {fileID: 114040100881967922}
   m_Layer: 0
-  m_Name: rock_wrapper
-  m_TagString: Untagged
+  m_Name: Paddle
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

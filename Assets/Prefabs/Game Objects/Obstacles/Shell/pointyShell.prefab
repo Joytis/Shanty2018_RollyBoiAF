@@ -9,47 +9,46 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1417063992316882}
+  m_RootGameObject: {fileID: 1858565833381578}
   m_IsPrefabAsset: 1
---- !u!1 &1417063992316882
+--- !u!1 &1858565833381578
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4310398609814894}
-  - component: {fileID: 33002044856836396}
-  - component: {fileID: 23306100266861940}
-  - component: {fileID: 54943020703393830}
-  - component: {fileID: 136136627991051242}
-  - component: {fileID: 114713750324467326}
+  - component: {fileID: 4849384065714276}
+  - component: {fileID: 33251052625662512}
+  - component: {fileID: 23112177936036696}
+  - component: {fileID: 65117847574442974}
+  - component: {fileID: 54545259209387616}
   m_Layer: 0
-  m_Name: OtherCub
+  m_Name: pointyShell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4310398609814894
+--- !u!4 &4849384065714276
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417063992316882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -57.412785, y: 27.7336, z: 3.0210857}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1858565833381578}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8, y: -22, z: 12}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23306100266861940
+--- !u!23 &23112177936036696
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417063992316882}
+  m_GameObject: {fileID: 1858565833381578}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -59,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: cf0f611f9ba3e424b9d3ea4fdbfe1d02, type: 2}
+  - {fileID: 2100000, guid: 93627cb39c3d20c4b85437416e36fbfe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,21 +78,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33002044856836396
+--- !u!33 &33251052625662512
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417063992316882}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54943020703393830
+  m_GameObject: {fileID: 1858565833381578}
+  m_Mesh: {fileID: 4300000, guid: 0da494d2735bf4f46aaecf107606a6ad, type: 3}
+--- !u!54 &54545259209387616
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417063992316882}
+  m_GameObject: {fileID: 1858565833381578}
   serializedVersion: 2
-  m_Mass: 30
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -101,29 +100,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 118
   m_CollisionDetection: 0
---- !u!114 &114713750324467326
-MonoBehaviour:
+--- !u!65 &65117847574442974
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417063992316882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fa69d4ed6490b342a13e35ff89b6973, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitPowerLevel: 300
-  deathType: 0
---- !u!136 &136136627991051242
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1417063992316882}
+  m_GameObject: {fileID: 1858565833381578}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.040886715, y: 0.041382868, z: 0.08214135}
+  m_Center: {x: 0, y: 0.004126409, z: -0.0025162697}
