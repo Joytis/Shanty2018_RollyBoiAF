@@ -32,6 +32,7 @@ public class ObstacleHitController : MonoBehaviour {
             {
                 case HitType.Obstacle:
                     col.gameObject.SendMessage("ApplyPowerLevel", hitPowerLevel, SendMessageOptions.DontRequireReceiver);
+                    // col.gameObject.SendMessage("", hitPowerLevel, SendMessageOptions.DontRequireReceiver);
                     col.gameObject.SendMessage("ApplyHit", deathType, SendMessageOptions.DontRequireReceiver);
                     break;
                 case HitType.Powerup:

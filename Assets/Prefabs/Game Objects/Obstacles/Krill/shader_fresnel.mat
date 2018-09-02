@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: shader_fresnel
-  m_Shader: {fileID: 4800000, guid: 08798e18c1a41fa409f094cea2cb3762, type: 3}
+  m_Shader: {fileID: 4800000, guid: 50ba31abd37ca314fb18993ed9be9b2a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -21,4 +21,4 @@ Material:
     m_Floats:
     - _Power: 0.2
     m_Colors:
-    - _Color: {r: 0.12454406, g: 1, b: 0, a: 0}
+    - _Color: {r: 0, g: 1, b: 0.95587206, a: 0}

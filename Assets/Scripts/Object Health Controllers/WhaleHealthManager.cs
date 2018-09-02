@@ -10,7 +10,7 @@ public class WhaleHealthManager : MonoBehaviour {
 
     public WhaleDeathType deathType; //Our death type our whale is set to
     public float force; //The amount of force we place on the whale when we call the method we want
-
+    public Vector3 direction;
 
 	// Use this for initialization
 	void Start () {
@@ -31,6 +31,11 @@ public class WhaleHealthManager : MonoBehaviour {
     void ApplyPowerLevel(float powerLevel)
     {
         force = powerLevel;
+    }
+
+    void ApplyDirection(Vector3 dir)
+    {
+        direction = dir;
     }
 
     void ApplyHit(WhaleDeathType type)
@@ -60,7 +65,7 @@ public class WhaleHealthManager : MonoBehaviour {
     void INSTAKILLTHEWHALE()
     {
         GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; //Goodbye free willy!
-        HOTJUMP();
+        // HOTJUMP();
     }
 
     //Have a nice flight WHALE!
