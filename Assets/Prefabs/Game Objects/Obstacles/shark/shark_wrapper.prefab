@@ -611,7 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hittype: 0
-  hitPowerLevel: 1000
+  hitPowerLevel: 700
   scoreCost: 0
   deathType: 0
 --- !u!136 &136170275618886938

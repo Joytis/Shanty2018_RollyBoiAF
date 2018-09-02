@@ -2308,6 +2308,24 @@ Prefab:
       propertyPath: objectList.Array.data[2].weight
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4767403800433138, guid: b8e563d8aec8422498d293c66be994af, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.0844116
+      objectReference: {fileID: 0}
+    - target: {fileID: 4767403800433138, guid: b8e563d8aec8422498d293c66be994af, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544740806741438, guid: b8e563d8aec8422498d293c66be994af,
+        type: 2}
+      propertyPath: objectList.Array.data[0].weight
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114544740806741438, guid: b8e563d8aec8422498d293c66be994af,
+        type: 2}
+      propertyPath: objectList.Array.data[1].weight
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8e563d8aec8422498d293c66be994af, type: 2}
   m_IsPrefabAsset: 0

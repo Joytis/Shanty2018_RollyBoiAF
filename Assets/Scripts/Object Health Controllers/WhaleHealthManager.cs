@@ -11,16 +11,12 @@ public class WhaleHealthManager : MonoBehaviour {
     public WhaleDeathType deathType; //Our death type our whale is set to
     public float force; //The amount of force we place on the whale when we call the method we want
     public Vector3 direction;
+    Rigidbody _rb;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    void Awake()
+    {
+        _rb = GetComponent<Rigidbody>();
+    }
 
     public void ApplyScore(int score)
     {
@@ -64,14 +60,15 @@ public class WhaleHealthManager : MonoBehaviour {
     //Our methods that control what the heck happens to our poor poor fat whale
     void INSTAKILLTHEWHALE()
     {
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None; //Goodbye free willy!
+        _rb.constraints = RigidbodyConstraints.None; //Goodbye free willy!
+        _rb.AddForce(force * direction);
         // HOTJUMP();
     }
 
     //Have a nice flight WHALE!
     void HOTJUMP()
     {
-        GetComponent<Rigidbody>().AddForce(force * Vector3.up);
+        _rb.AddForce(force * Vector3.up);
     }
 
     void SLAP()
@@ -82,10 +79,10 @@ public class WhaleHealthManager : MonoBehaviour {
         //Slap the whale right
         if(rand > 0)
         {
-            GetComponent<Rigidbody>().AddForce(force * Vector3.right);
+            _rb.AddForce(force * Vector3.right);
         }else
         {
-            GetComponent<Rigidbody>().AddForce(force * -Vector3.right);
+            _rb.AddForce(force * -Vector3.right);
         }
     }
 }
