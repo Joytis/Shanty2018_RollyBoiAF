@@ -40,12 +40,17 @@ public class GameWinLossController : MonoBehaviour {
 
         if(scoreManager.gameOver)
         {
-            foreach(var component in disableOnLoss)
-                component.enabled = false;
-            lossScreen.SetActive(true);
-            // Debug.LogWarning("YOU LOSE");
-            Cursor.lockState = CursorLockMode.None;
+            GameOver();
 
         }
 	}
+
+    public void GameOver()
+    {
+        foreach(var component in disableOnLoss)
+            component.enabled = false;
+        lossScreen.SetActive(true);
+        // Debug.LogWarning("YOU LOSE");
+        Cursor.lockState = CursorLockMode.None;
+    }
 }

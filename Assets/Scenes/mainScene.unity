@@ -467,32 +467,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9623e989f1af0480990a4cc5c3928663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &58031263 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1060180336997132, guid: b8e563d8aec8422498d293c66be994af,
-    type: 2}
-  m_PrefabInternal: {fileID: 735632976}
---- !u!114 &58031273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 58031263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8982a2ca053f16a45a0813a9044d17f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  effetcs:
-  - thing: {fileID: 1385881518535778, guid: 2782c63f4eac7884eb7d07a12f048f80, type: 2}
-    layer: Jellyfish
-    destroyAfter: 1
-  - thing: {fileID: 1617643777356524, guid: 0a5c398fb967a0f4e9b3ee28df600395, type: 2}
-    layer: Shark
-    destroyAfter: 4
-  - thing: {fileID: 1387569346036280, guid: ae227175492d6a14c85520c6a0d739e5, type: 2}
-    layer: Krill
-    destroyAfter: 4
 --- !u!1 &71213400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,11 +2201,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114274836920568208, guid: b8e563d8aec8422498d293c66be994af,
-        type: 2}
-      propertyPath: _disabledOnStart.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4757486344330082, guid: b8e563d8aec8422498d293c66be994af, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2279,52 +2248,10 @@ Prefab:
       propertyPath: lossScreen
       value: 
       objectReference: {fileID: 1183034266}
-    - target: {fileID: 114205081079929256, guid: b8e563d8aec8422498d293c66be994af,
-        type: 2}
-      propertyPath: spawnRate
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114274836920568208, guid: b8e563d8aec8422498d293c66be994af,
-        type: 2}
-      propertyPath: _disabledOnStart.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4766738245773468, guid: b8e563d8aec8422498d293c66be994af, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 21
-      objectReference: {fileID: 0}
-    - target: {fileID: 114205081079929256, guid: b8e563d8aec8422498d293c66be994af,
-        type: 2}
-      propertyPath: objectList.Array.data[0].weight
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114205081079929256, guid: b8e563d8aec8422498d293c66be994af,
-        type: 2}
-      propertyPath: objectList.Array.data[1].weight
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114205081079929256, guid: b8e563d8aec8422498d293c66be994af,
-        type: 2}
-      propertyPath: objectList.Array.data[2].weight
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4767403800433138, guid: b8e563d8aec8422498d293c66be994af, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.0844116
-      objectReference: {fileID: 0}
-    - target: {fileID: 4767403800433138, guid: b8e563d8aec8422498d293c66be994af, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 114544740806741438, guid: b8e563d8aec8422498d293c66be994af,
         type: 2}
-      propertyPath: objectList.Array.data[0].weight
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114544740806741438, guid: b8e563d8aec8422498d293c66be994af,
-        type: 2}
-      propertyPath: objectList.Array.data[1].weight
-      value: 2
+      propertyPath: maxSpawnRate
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8e563d8aec8422498d293c66be994af, type: 2}
