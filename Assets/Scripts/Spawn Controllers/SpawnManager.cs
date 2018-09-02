@@ -16,6 +16,11 @@ public class SpawnManager : MonoBehaviour {
     public float spawnRate; //Our spawning rate of our game objects
     public Transform spawnLocationParentTrans; //Where are our spawn points in the world?
 
+    public float initialSpawnRate = 1.0f;
+    public float timeToMaxSpawnRate = 60f;
+    public float maxSpawnRate = 0.1f;
+    float accumulatedTime = 0f;
+
     //Private variables
     private float timer = 0.0f;
 
@@ -36,6 +41,9 @@ public class SpawnManager : MonoBehaviour {
         //Increment our timer then when we reach over the spawn rate we randomly spawn our object
 
         timer += Time.deltaTime;
+        accumulatedTime += Time.deltaTime;
+
+        spawnRate = Mathf.SmoothStep(initialSpawnRate, maxSpawnRate, accumulatedTime / timeToMaxSpawnRate);
 
         if(timer > spawnRate)
         {
@@ -60,7 +68,7 @@ public class SpawnManager : MonoBehaviour {
         var paddle = GameObject.FindGameObjectWithTag("Paddle");
         var paddleColl = paddle.GetComponent<Collider>();
         Physics.IgnoreCollision(coll, paddleColl);
-         timer = 0.0f;
+        timer = 0.0f;
     }
 }
 

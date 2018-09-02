@@ -18,7 +18,7 @@ public class PersistentCameraShake3D : ScriptableObject {
     public float YTimeScale => yTimeScale;
     public float MinimumTrauma {get; set;} = 0f;
 
-    public float Trauma {get; private set;}
+    public float Trauma {get; private set;} = 0f;
     public float Shake => Trauma * Trauma;
     float traumaDrainRate;
 

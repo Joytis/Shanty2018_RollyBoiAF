@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour {
 
     //Public Variables
-    public Text highscoreText;
-    public Text scoreText;
+    public TextMeshProUGUI highscoreText;
+    public TextMeshProUGUI scoreText;
     public float earnRate; //How fast we earn just by moving through space and time
     public int score; //our current score duhhh
     public int highScore; //our highest score SO FAR!
